@@ -58,4 +58,4 @@ public class MyTabable implements Tabable {
     }
 }
 ```
-Command conditions and prequisites use an equivalent approach. 
+Command conditions and prerequisites use an equivalent approach. 
