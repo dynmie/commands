@@ -61,4 +61,11 @@ public class MyTabable implements Tabable {
     }
 }
 ```
+```java
+public class MyCommand extends BaseCommand {
+    public MyCommand() {
+        setTabables(List.of(new MyTabable()));
+    }
+}
+```
 Command conditions and prerequisites use an equivalent approach. 
