@@ -1,7 +1,10 @@
 # Dynmie's Command Framework (DCF)
+A cool command framework for Minecraft.
 
 ## About
 This is a stripped down version of the command framework used on [pixlies.net](https://pixlies.net/).
+
+WARNING: This only runs on Paper. Spigot and Bukkit will not be supported.
 
 ## Contributing
 Want to contribute? Create a pull request!
