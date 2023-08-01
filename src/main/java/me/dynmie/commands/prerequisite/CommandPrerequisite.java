@@ -1,4 +1,4 @@
-package me.dynmie.commands.prequisite;
+package me.dynmie.commands.prerequisite;
 
 import me.dynmie.commands.CommandStatus;
 import org.bukkit.command.CommandSender;

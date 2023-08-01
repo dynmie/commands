@@ -3,7 +3,7 @@ package me.dynmie.commands;
 import lombok.Getter;
 import lombok.Setter;
 import me.dynmie.commands.condition.CommandCondition;
-import me.dynmie.commands.prequisite.CommandPrerequisite;
+import me.dynmie.commands.prerequisite.CommandPrerequisite;
 import me.dynmie.commands.tabable.Tabable;
 import org.bukkit.util.StringUtil;
 import org.jetbrains.annotations.NotNull;

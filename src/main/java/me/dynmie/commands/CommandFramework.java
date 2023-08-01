@@ -2,7 +2,7 @@ package me.dynmie.commands;
 
 import lombok.Getter;
 import me.dynmie.commands.condition.CommandCondition;
-import me.dynmie.commands.prequisite.CommandPrerequisite;
+import me.dynmie.commands.prerequisite.CommandPrerequisite;
 import me.dynmie.commands.utils.ChatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
