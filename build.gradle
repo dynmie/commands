@@ -17,7 +17,7 @@ repositories {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'me.dynmie.commands'
+            groupId = 'me.dynmie'
 	    artifactId = 'commands'
 	    version = '1.0-SNAPSHOT'
 	}
