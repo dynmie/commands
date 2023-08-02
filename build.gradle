@@ -15,6 +15,13 @@ repositories {
 }
 
 publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'me.dynmie.commands'
+	    artifactId = 'Commands'
+	    version = '1.0-SNAPSHOT'
+	}
+    }
     repositories {
         maven {
             name = "GitHubPackages"
