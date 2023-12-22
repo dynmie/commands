@@ -32,12 +32,14 @@ test {
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = group
             artifactId = 'CommandFramework'
             version = version
+            from components.java
         }
     }
 }
