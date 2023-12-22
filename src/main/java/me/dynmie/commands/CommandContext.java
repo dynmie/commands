@@ -145,11 +145,9 @@ public class CommandContext {
 
         T ret;
         try {
-            //noinspection unchecked
-            ret = (T) function.apply(getArgAt(pos));
+            ret = clazz.cast(function.apply(getArgAt(pos)));
         } catch (ClassCastException e) {
-            e.printStackTrace();
-            return null;
+            throw new RuntimeException(e);
         }
 
         return ret;

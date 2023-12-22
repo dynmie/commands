@@ -7,6 +7,7 @@ import org.bukkit.ChatColor;
  */
 public class ChatUtils {
 
+    @SuppressWarnings("deprecation") // legacy chat formatting
     public static String format(String fc) {
         return ChatColor.translateAlternateColorCodes('&', fc);
     }

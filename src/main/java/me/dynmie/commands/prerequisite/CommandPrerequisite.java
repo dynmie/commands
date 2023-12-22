@@ -1,6 +1,6 @@
 package me.dynmie.commands.prerequisite;
 
-import me.dynmie.commands.CommandStatus;
+import me.dynmie.commands.CommanResult;
 import org.bukkit.command.CommandSender;
 
 /**
@@ -13,6 +13,6 @@ public interface CommandPrerequisite {
      * @param sender Sender executing the command
      * @return The status
      */
-    CommandStatus check(CommandSender sender);
+    CommanResult check(CommandSender sender);
 
 }

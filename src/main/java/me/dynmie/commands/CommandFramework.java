@@ -129,7 +129,7 @@ public class CommandFramework {
         // CONDITION
         if (current.getPrerequisites() != null) {
             for (CommandPrerequisite prerequisite : current.getPrerequisites()) {
-                CommandStatus status = prerequisite.check(sender);
+                CommanResult status = prerequisite.check(sender);
                 runStat(sender, status, usage);
 
                 if (!status.isSuccess()) return;
@@ -144,7 +144,7 @@ public class CommandFramework {
                 CommandCondition condition = current.getConditions().get(i);
                 if (condition == null) continue;
 
-                CommandStatus status = condition.check(sender, argsToReturn.get(i));
+                CommanResult status = condition.check(sender, argsToReturn.get(i));
                 runStat(sender, status, usage);
 
                 if (!status.isSuccess()) return;
@@ -166,7 +166,7 @@ public class CommandFramework {
     private void execute(BaseCommand command, CommandContext context, String usage) {
         CommandSender sender = context.getSender();
 
-        CommandStatus status;
+        CommanResult status;
         try {
             status = command.onExecute(context);
         } catch (Throwable throwable) {
@@ -178,7 +178,7 @@ public class CommandFramework {
         runStat(sender, status, usage);
     }
 
-    private void runStat(CommandSender sender, CommandStatus status, String usage) {
+    private void runStat(CommandSender sender, CommanResult status, String usage) {
         switch (status) {
             case INCORRECT_USAGE -> settings.getOnIncorrectUsage().accept(sender, usage);
             case NO_PERMISSIONS -> settings.getOnNoPerm().accept(sender);

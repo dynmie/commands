@@ -65,7 +65,7 @@ public abstract class BaseCommand {
         }
     }
 
-    public abstract @NotNull CommandStatus onExecute(@NotNull CommandContext context);
+    public abstract @NotNull CommanResult onExecute(@NotNull CommandContext context);
 
     public @Nullable List<String> onTab(@NotNull CommandContext context) {
         int size = context.getArgs().size();
