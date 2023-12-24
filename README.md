@@ -2,9 +2,54 @@
 A cool command framework for Minecraft.
 
 ## About
-This is a stripped down version of the command framework used on [pixlies.net](https://pixlies.net/).
+This is a stripped down version of the command framework used on [pixlies.net](https://pixlies.net/). 
 
-WARNING: This only runs on Paper. Spigot and Bukkit will not be supported.
+WARNING: This only runs on Paper. Spigot and Bukkit is not supported.
+
+## For developers
+If you wish to use DCF in your pluhin, add the dependency to your `pom.xml` file. 
+```xml
+<repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
+
+<dependency>
+    <groupId>com.github.dynmie</groupId>
+    <artifactId>commands</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+To avoid dependency conflicts, make sure you shade DCF.
+```xml
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <relocations>
+          <relocation>
+            <pattern>me.dynmie.commands</pattern>
+            <!-- Replace this with your package! -->
+            <shadedPattern>your.package</shadedPattern>
+          </relocation>
+        </relocations>
+      </configuration>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+```
 
 ## Contributing
 Want to contribute? Create a pull request!
@@ -68,4 +113,4 @@ public class MyCommand extends BaseCommand {
     }
 }
 ```
-Command conditions and prerequisites use an equivalent approach. 
+Command conditions and prerequisites use an equivalent approach.
