@@ -1,6 +1,6 @@
 package me.dynmie.commands.condition;
 
-import me.dynmie.commands.CommanResult;
+import me.dynmie.commands.CommandResult;
 import org.bukkit.command.CommandSender;
 
 /**
@@ -14,6 +14,6 @@ public interface CommandCondition {
      * @param arg Argument to check for
      * @return Status of the check
      */
-    CommanResult check(CommandSender sender, String arg);
+    CommandResult check(CommandSender sender, String arg);
 
 }

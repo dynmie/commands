@@ -1,6 +1,6 @@
 package me.dynmie.commands.condition;
 
-import me.dynmie.commands.CommanResult;
+import me.dynmie.commands.CommandResult;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -11,7 +11,7 @@ import java.util.UUID;
  */
 public class Conditions {
 
-    private static final CommandCondition emptyCondition = (sender, arg) -> CommanResult.OK;
+    private static final CommandCondition emptyCondition = (sender, arg) -> CommandResult.OK;
 
     private static final CommandCondition playerCondition = (sender, arg) -> {
         Player player = Bukkit.getPlayer(arg);
@@ -25,17 +25,17 @@ public class Conditions {
         }
 
         if (player == null) {
-            return CommanResult.PLAYER_NOT_EXIST;
+            return CommandResult.PLAYER_NOT_EXIST;
         }
 
-        return CommanResult.OK;
+        return CommandResult.OK;
     };
 
     private static final CommandCondition worldCondition = (sender, arg) -> {
         if (Bukkit.getWorld(arg) == null) {
-            return CommanResult.INCORRECT_USAGE;
+            return CommandResult.INCORRECT_USAGE;
         }
-        return CommanResult.OK;
+        return CommandResult.OK;
     };
 
     public static CommandCondition empty() {

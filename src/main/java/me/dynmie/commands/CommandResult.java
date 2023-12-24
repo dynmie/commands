@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * @author dynmie
  */
-public enum CommanResult {
+public enum CommandResult {
 
     OK(true),
 
@@ -19,7 +19,7 @@ public enum CommanResult {
 
     private final @Getter boolean success;
 
-    CommanResult(boolean success) {
+    CommandResult(boolean success) {
         this.success = success;
     }
 
